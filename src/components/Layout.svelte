@@ -26,7 +26,7 @@
                 </a>
             </li>
             <li>
-                <a use:link href="/control">
+                <a use:link href="/login">
                     <div class="row">
                         <i class="material-icons col 6s">cloud</i>
                         Panel Sterowania
@@ -49,7 +49,7 @@
                 </a>
             </li>
             <li>
-                <a use:link href="/control">
+                <a use:link href="/login">
                     <i class="material-icons">cloud</i>
                     Panel Sterowania
                 </a>

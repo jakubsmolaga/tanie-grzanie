@@ -1,43 +1,95 @@
-<div class="container" style="min-height: 70vh;">
-    <div class="section">
-        <div class="row">
-            <br />
-            <br />
+<script>
+    import { fade, crossfade } from "svelte/transition";
+    import { flip } from "svelte/animate";
+    import { cubicOut } from "svelte/easing";
 
-            <h3 class="header center">
-                Zaloguj się aby uzyskać dostęp do Panelu Sterowania
-            </h3>
+    const [send, receive] = crossfade({});
 
-            <br />
-            <br />
+    let heatingMode = "manual";
+    let heatingLevel = 67;
+    let temperature = 21;
+    let checkbox = false;
 
-            <form class="col s12 m4 offset-m4 center">
-                <div class="input-field">
-                    <i class="material-icons prefix">email</i>
-                    <input id="icon_prefix" type="text" class="validate" />
-                    <label for="icon_prefix">Adres Email</label>
-                </div>
-                <div class="input-field">
-                    <i class="material-icons prefix">lock</i>
+    $: console.log(heatingMode);
+    $: heatingMode = checkbox ? "auto" : "manual";
+</script>
+
+<div class="container">
+    <div class="section center">
+        <div class="row center">
+            <!-- Dane -->
+            <h2 class="header">Aktualne Dane</h2>
+            <p class="flow-text">
+                <i class="material-icons">speed</i>
+                Temperatura: 21,56°C
+            </p>
+            <p class="flow-text">
+                <i class="material-icons">opacity</i>
+                Wilgotność: 92%
+            </p>
+            <p class="flow-text">
+                <i class="material-icons">ac_unit</i>
+                Owarte Okna: 1
+            </p>
+
+            <!-- Sterowanie -->
+            <h2 class="header">Sterowanie Grzejnikiem</h2>
+            <div class="switch">
+                <label class="flow-text">
+                    Manualne
                     <input
-                        id="icon_telephone"
-                        type="password"
-                        class="validate" />
-                    <label for="icon_telephone">Hasło</label>
+                        type="checkbox"
+                        on:change={() => (checkbox = !checkbox)} />
+                    <span class="lever" />
+                    Automatyczne
+                </label>
+            </div>
+
+            {#if heatingMode === 'manual'}
+                <div>
+                    <p class="flow-text">Ustaw moc grzejnika</p>
+                    <span class="flow-text">{heatingLevel}%</span>
+                    <p class="range-field col s12">
+                        <input
+                            type="range"
+                            class="col s12 m4 offset-m4"
+                            bind:value={heatingLevel}
+                            min="0"
+                            max="100" />
+                    </p>
+                    <div class="col s12">
+                        <button
+                            class="btn waves-effect waves-light "
+                            type="submit"
+                            name="action">
+                            Zatwierdź
+                            <i class="material-icons right">send</i>
+                        </button>
+                    </div>
                 </div>
-
-                <br />
-
-                <button
-                    class="btn waves-effect waves-light"
-                    type="submit"
-                    name="action">
-                    Zaloguj się
-                    <i class="material-icons right">send</i>
-                </button>
-
-                <p>lub <a href="#!">stwórz nowe konto</a></p>
-            </form>
+            {:else}
+                <div>
+                    <p class="flow-text">Ustaw temperaturę</p>
+                    <span class="flow-text">{temperature}°C</span>
+                    <p class="range-field col s12">
+                        <input
+                            type="range"
+                            class="col s12 m4 offset-m4"
+                            bind:value={temperature}
+                            min="15"
+                            max="30" />
+                    </p>
+                    <div class="col s12">
+                        <button
+                            class="btn waves-effect waves-light "
+                            type="submit"
+                            name="action">
+                            Zatwierdź
+                            <i class="material-icons right">send</i>
+                        </button>
+                    </div>
+                </div>
+            {/if}
         </div>
     </div>
 </div>

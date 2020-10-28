@@ -6,11 +6,13 @@
 	import Home from "./pages/Home.svelte";
 	import Info from "./pages/Info.svelte";
 	import Shop from "./pages/Shop.svelte";
+	import Login from "./pages/Login.svelte";
 	import Control from "./pages/Control.svelte";
 
 	const routes = [
 		["info", Info],
 		["shop", Shop],
+		["login", Login],
 		["control", Control],
 		["/", Home],
 	];
