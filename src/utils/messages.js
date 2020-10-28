@@ -14,7 +14,7 @@ socket.addEventListener('message', function (e) {
 
 export const sendMessage = (type, message) => {
     if (socket.readyState > 1) return console.log('Cant send message while connecting');
-    socket.send(type + message);
+    socket.send(`${type}${message}`);
 }
 
 export const subscribe = messageStore.subscribe

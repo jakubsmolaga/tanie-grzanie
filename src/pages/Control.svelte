@@ -1,5 +1,5 @@
 <script>
-    import { subscribe } from "../utils/messages";
+    import { sendMessage, subscribe } from "../utils/messages";
 
     let heatingMode = "manual";
     let heatingLevel = 67;
@@ -66,7 +66,8 @@
                         <button
                             class="btn waves-effect waves-light "
                             type="submit"
-                            name="action">
+                            name="action"
+                            on:click={() => sendMessage('g', heatingLevel)}>
                             Zatwierdź
                             <i class="material-icons right">send</i>
                         </button>
@@ -89,7 +90,8 @@
                         <button
                             class="btn waves-effect waves-light "
                             type="submit"
-                            name="action">
+                            name="action"
+                            on:click={() => sendMessage('a', temperature)}>
                             Zatwierdź
                             <i class="material-icons right">send</i>
                         </button>
