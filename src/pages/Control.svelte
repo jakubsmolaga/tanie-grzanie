@@ -1,8 +1,18 @@
 <script>
+    import { subscribe } from "../utils/messages";
+
     let heatingMode = "manual";
     let heatingLevel = 67;
     let temperature = 21;
     let checkbox = false;
+
+    let currentTemperature = 21;
+    let currentHumidity = 75;
+
+    subscribe(([type, data]) => {
+        if (type === "t") currentTemperature = parseFloat(data);
+        if (type === "h") currentHumidity = parseFloat(data);
+    });
 
     $: heatingMode = checkbox ? "auto" : "manual";
 </script>
@@ -14,11 +24,13 @@
             <h2 class="header">Aktualne Dane</h2>
             <p class="flow-text">
                 <i class="material-icons">speed</i>
-                Temperatura: 21,56°C
+                Temperatura:
+                {currentTemperature}°C
             </p>
             <p class="flow-text">
                 <i class="material-icons">opacity</i>
-                Wilgotność: 92%
+                Wilgotność:
+                {currentHumidity}%
             </p>
             <p class="flow-text">
                 <i class="material-icons">ac_unit</i>
