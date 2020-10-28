@@ -1,16 +1,9 @@
 <script>
-    import { fade, crossfade } from "svelte/transition";
-    import { flip } from "svelte/animate";
-    import { cubicOut } from "svelte/easing";
-
-    const [send, receive] = crossfade({});
-
     let heatingMode = "manual";
     let heatingLevel = 67;
     let temperature = 21;
     let checkbox = false;
 
-    $: console.log(heatingMode);
     $: heatingMode = checkbox ? "auto" : "manual";
 </script>
 
@@ -77,7 +70,8 @@
                             class="col s12 m4 offset-m4"
                             bind:value={temperature}
                             min="15"
-                            max="30" />
+                            max="26"
+                            step="0.5" />
                     </p>
                     <div class="col s12">
                         <button

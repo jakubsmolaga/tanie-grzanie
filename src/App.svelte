@@ -8,6 +8,7 @@
 	import Shop from "./pages/Shop.svelte";
 	import Login from "./pages/Login.svelte";
 	import Control from "./pages/Control.svelte";
+	import NotFound from "./pages/404.svelte";
 
 	const routes = [
 		["info", Info],
@@ -33,6 +34,7 @@
 					</div>
 				</Route>
 			{/each}
+			<Route component={NotFound} />
 		</div>
 	</Layout>
 </Router>

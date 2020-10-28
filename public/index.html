@@ -29,19 +29,21 @@
 <body>
 
   <noscript>
-    <div>
+    <h1 class="header orange">
       Oops! Javascript required here! Allow it and try again!
-    </div>
+    </h1>
   </noscript>
 
-  <script src="/scripts/install.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
-  </script>
+  <!-- <script src="/scripts/install.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script>
+    // MaterializeCSS sidenav
     document.addEventListener('DOMContentLoaded', function () {
       var elems = document.querySelectorAll('.sidenav');
       M.Sidenav.init(elems, {});
     });
+
+    // Service Worker
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
         navigator.serviceWorker.register('/service-worker.js')
