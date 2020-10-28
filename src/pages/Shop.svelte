@@ -9,13 +9,15 @@
                             style="filter: brightness(70%);"
                             src="images/galka.jpg"
                             alt="Gałka" />
-                        <span class="card-title">Super Gała</span>
+                        <span class="card-title">
+                            Inteligentna Głowica Termostatyczna
+                        </span>
                     </div>
                     <div class="card-content">
                         <p>
-                            Super gała pozwoli ci na zdalne sterowanie
-                            kaloryferem. Po jej zakupie już nigdy nie będziesz
-                            musiał wstać z fotela
+                            Inteligentna głowica termostatyczna pozwala na
+                            podłączenie grzejnika do naszego systemu. Umożliwia
+                            to zdalną kontrolę poziomu grzania.
                         </p>
                     </div>
                     <div class="card-action"><a href="#!">Kup Teraz</a></div>
@@ -30,12 +32,14 @@
                             style="filter: brightness(70%);"
                             src="images/termometr.jpg"
                             alt="Termometr" />
-                        <span class="card-title">Ekstra Termometr</span>
+                        <span class="card-title">Czujnik Temperatury</span>
                     </div>
                     <div class="card-content">
                         <p>
-                            Ekstra termometr będzie dostarczał ci niezbędnych
-                            informacji na temat temperatury w twoim domu.
+                            Jednym z kluczowych elementów naszego systemu są
+                            regularne pomiary temperatury. To dzięki nim
+                            jesteśmy w stanie inteligentnie regulować moc
+                            grzejników.
                         </p>
                     </div>
                     <div class="card-action"><a href="#!">Kup Teraz</a></div>
@@ -50,13 +54,13 @@
                             style="filter: brightness(70%);"
                             src="images/okno.jpg"
                             alt="Okno" />
-                        <span class="card-title">Mądre Okno</span>
+                        <span class="card-title">Czujnik Okienny</span>
                     </div>
                     <div class="card-content">
                         <p>
-                            Monitoruj otwieranie i zamykanie swoich okien a my
-                            użyjemy tych danych do optymalizacji twojego planu
-                            ogrzewania.
+                            System czujników okiennych pozwala na wykrywanie
+                            wietrzenia pomieszczeń i dostosowywanie mocy
+                            grzejników do tych danych.
                         </p>
                     </div>
                     <div class="card-action"><a href="#!">Kup Teraz</a></div>

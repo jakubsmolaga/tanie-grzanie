@@ -17,7 +17,7 @@
     </div>
 
     <div class="section">
-        <h2 class="header">Czy Pudzian wróci do formy?</h2>
+        <h2 class="header">Dokąd zmierza projekt?</h2>
         <p class="flow-text">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget
             mauris ac elit cursus consectetur tempus sit amet turpis. Vestibulum

@@ -4,10 +4,10 @@
             <div class="col l6 s12">
                 <h5 class="white-text">O Zespole</h5>
                 <p class="grey-text text-lighten-4">
-                    Jesteśmy grupą studentów PW na kierunku Inżynieria Internetu
-                    Rzeczy. Pomysł na ten projekt zrodził się z absolutnego
-                    braku jakichkolwiek innych pomysłów. Musieliśmy coś zrobić
-                    żeby zaliczyć więc uznaliśmy że kaloryfer robi brrrr.
+                    Jesteśmy grupą studentów Politechniki Warszawskiej na
+                    kierunku Inżynieria Internetu Rzeczy. Łączy nas wspólna
+                    wizja udoskonalania otaczającego nas świata przy użyciu
+                    nowoczesnych technologii.
                 </p>
             </div>
             <div class="col l3 s12">
@@ -16,7 +16,7 @@
                     <li><a class="white-text" href="#!">Facebook</a></li>
                     <li><a class="white-text" href="#!">Twitter</a></li>
                     <li><a class="white-text" href="#!">Youtube</a></li>
-                    <li><a class="white-text" href="#!">Pornhub</a></li>
+                    <li><a class="white-text" href="#!">GitHub</a></li>
                 </ul>
             </div>
         </div>
