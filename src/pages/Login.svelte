@@ -1,8 +1,23 @@
 <script>
     import { navigate } from "svelte-routing";
+
+    let email = "";
+    let password = "";
+    let error = "";
+
     const onSubmit = (e) => {
         e.preventDefault();
-        navigate("/control");
+        fetch(
+            `https://dupa.kubasmolaga.pl:8080/?email=${email}&password=${password}`
+        ).then((res) => {
+            if (res.status === 200) {
+                navigate("/control");
+                return;
+            }
+            password = "";
+            error = "Logowanie nie powiodło się";
+            console.log(res);
+        });
     };
 </script>
 
@@ -22,7 +37,11 @@
             <form class="col s12 m4 offset-m4 center" on:submit={onSubmit}>
                 <div class="input-field">
                     <i class="material-icons prefix">email</i>
-                    <input id="icon_prefix" type="text" class="validate" />
+                    <input
+                        id="icon_prefix"
+                        type="email"
+                        class="validate"
+                        bind:value={email} />
                     <label for="icon_prefix">Adres Email</label>
                 </div>
                 <div class="input-field">
@@ -30,11 +49,14 @@
                     <input
                         id="icon_telephone"
                         type="password"
-                        class="validate" />
+                        class="validate"
+                        bind:value={password} />
                     <label for="icon_telephone">Hasło</label>
                 </div>
 
                 <br />
+
+                <p class="flow-text" style="color: red;">{error}</p>
 
                 <button
                     class="btn waves-effect waves-light"
