@@ -5,6 +5,7 @@
     let heatingLevel = 67;
     let temperature = 21;
     let checkbox = false;
+    let window = false;
 
     let currentTemperature = 21;
     let currentHumidity = 75;
@@ -12,6 +13,8 @@
     subscribe(([type, data]) => {
         if (type === "t") currentTemperature = parseFloat(data);
         if (type === "h") currentHumidity = parseFloat(data);
+        if (type === "o") window = data === "1";
+        console.log(type, data);
     });
 
     $: heatingMode = checkbox ? "auto" : "manual";
@@ -34,7 +37,8 @@
             </p>
             <p class="flow-text">
                 <i class="material-icons">ac_unit</i>
-                Owarte Okna: 1
+                Status Okna:
+                {window ? 'Otwarte' : 'Zamknięte'}
             </p>
 
             <!-- Sterowanie -->
